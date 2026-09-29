@@ -1,0 +1,95 @@
+{
+  "_about": "Engine settings. Hand edited only: the Coach never writes here. Its bounded knobs live in tunables.json, and the rules it cannot touch live in policy.json.",
+
+  "schedule": {
+    "timezone": "Asia/Kolkata",
+    "daily_run": "03:30",
+    "_daily_note": "Low traffic hour for the site's main markets. Deploys only happen inside deploy_window.",
+    "deploy_window": ["03:00", "06:00"],
+    "coach_weekday": "Sun",
+    "coach_time": "09:00",
+    "deadman_hours": 36,
+    "outcome_check_every_hours": 24
+  },
+
+  "autopilot": {
+    "_note": "Tiers: T0 read only, T1 reversible content metadata, T2 site configuration, T3 code deploy. Tiers listed in approval_required wait for a human; an empty list means fully hands free.",
+    "enabled": true,
+    "approval_required": [],
+    "max_actions_per_run": {"T1": 30, "T2": 4, "T3": 1},
+    "max_t3_per_week": 3
+  },
+
+  "models": {
+    "default": "claude-opus-5-5",
+    "_note": "One model keeps one prompt cache. Effort is set per role; Opus 5.5 defaults to medium, so every role states it explicitly.",
+    "roles": {
+      "speed_doctor":  {"effort": "high"},
+      "search_analyst": {"effort": "medium"},
+      "ai_visibility": {"effort": "high"},
+      "copywriter":    {"effort": "high"},
+      "engineer":      {"effort": "xhigh"},
+      "gatekeeper":    {"effort": "high"},
+      "coach":         {"effort": "high"}
+    }
+  },
+  "use_server_fallbacks": true,
+
+  "run_budget": {
+    "_note": "Per run. Generation stops when either is exceeded; cache reads count at 10%.",
+    "max_input_tokens": 900000,
+    "max_output_tokens": 120000
+  },
+
+  "crawl": {
+    "min_interval_seconds": 1.5,
+    "_interval_note": "Never burst the site. A 2026 incident: repeated crawls from one IP put it on the host's reputation firewall.",
+    "timeout_seconds": 40,
+    "max_pages": 500,
+    "user_agent": "SAGO-Auditor/1.0 (+https://github.com/jeetpatel92/SEO-AEO-GEO-AIO-optimization-agent-system)"
+  },
+
+  "psi": {
+    "runs": 3,
+    "strategies": ["mobile", "desktop"],
+    "categories": ["performance", "accessibility", "best-practices", "seo"],
+    "max_parallel": 1
+  },
+
+  "gsc": {
+    "window_days": 28,
+    "compare_previous": true,
+    "row_limit": 5000
+  },
+
+  "retries": {
+    "max_attempts": 3,
+    "base_seconds": 2,
+    "max_seconds": 60
+  },
+
+  "gatekeeper": {
+    "max_revisions": 2
+  },
+
+  "verification": {
+    "psi_regression_points": 3,
+    "cls_ceiling": 0.1,
+    "lcp_ceiling_s": 2.5,
+    "quarantine_days": 14
+  },
+
+  "breakers": {
+    "failed_deploys_to_freeze_t3": 2,
+    "t3_freeze_days": 7,
+    "rollback_failures_to_halt": 1,
+    "consecutive_run_errors_to_alert": 3
+  },
+
+  "coach": {
+    "min_samples_per_kind": 3,
+    "max_change_factor": 0.2,
+    "revert_if_below": 0.85,
+    "control_pages": 5
+  }
+}

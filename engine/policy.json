@@ -1,0 +1,48 @@
+{
+  "_about": "Non negotiables. The Gatekeeper enforces these in code before any model review, and nothing the system learns can relax them: the Coach has no write path to this file.",
+
+  "copy": {
+    "forbid_dashes": true,
+    "_dash_note": "The site owner's rule: no hyphen, en dash or em dash in published copy. URLs and code are exempt.",
+    "title_min": 30,
+    "title_max": 60,
+    "description_min": 110,
+    "description_max": 160,
+    "brand_suffix": " | {brand}",
+    "banned_phrases": ["guaranteed #1", "guaranteed rankings", "best in the world", "100% guaranteed", "rank #1 overnight"],
+    "no_new_numbers": true,
+    "_numbers_note": "Copy may only state figures that already appear on the page or in the site profile's approved_facts."
+  },
+
+  "forbidden_actions": [
+    "delete_user", "change_user_role", "change_password", "rotate_credentials",
+    "edit_payment_settings", "delete_post", "delete_page", "trash_content",
+    "noindex_homepage", "robots_disallow_all", "change_site_url", "deactivate_security_plugin",
+    "add_review_schema", "add_aggregate_rating_schema"
+  ],
+
+  "never_delay_scripts": ["jquery", "jquery-migrate", "forminator", "wpcf7", "gravityforms", "wpforms"],
+  "_never_delay_note": "Delaying a form plugin's jQuery stack until interaction left the contact form uninitialised in production. Captcha scripts may be delayed; the form stack may not.",
+
+  "protected_options": ["siteurl", "home", "admin_email", "users_can_register", "default_role", "blog_public"],
+
+  "tiers": {
+    "T0": ["report"],
+    "T1": ["set_seo", "set_social", "request_recrawl"],
+    "T2": ["set_option", "toggle_plugin", "purge_cache"],
+    "T3": ["deploy_theme"]
+  },
+
+  "option_keys_allowed": [
+    "sago.form_fonts", "sago.delay_scripts", "sago.css_excludes", "sago.disable_yoast_schema", "sago.disable_saswp",
+    "sago.title_separator"
+  ],
+  "_option_keys_note": "Abstract keys. The connector maps each to the real plugin option on the server and refuses anything else.",
+  "plugins_allowed_to_toggle": ["contact-form-7", "schema-and-structured-data-for-wp", "flamingo"],
+
+  "verification_required": {
+    "T1": ["title_rendered", "no_dashes", "page_200"],
+    "T2": ["site_invariants", "forms_initialise"],
+    "T3": ["site_invariants", "forms_initialise", "psi_no_regression", "schema_single_owner"]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "_about": "Rules the Coach adds from incidents (a failed verification, a rollback). The Gatekeeper enforces them next to policy.json. The Coach may add or retire rules here, never loosen policy.json.",
+  "rules": []
+}

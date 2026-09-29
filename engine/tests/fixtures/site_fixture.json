@@ -1,0 +1,259 @@
+{
+  "_about": "A synthetic site with the faults SAGO was built to fix. Names and numbers are invented.",
+  "base_url": "https://www.example.com",
+  "brand": "Northwind Growth",
+  "brand_terms": [
+    "northwind growth",
+    "northwind"
+  ],
+  "bot_status": {
+    "GPTBot": 429
+  },
+  "llms_txt": true,
+  "options": {
+    "sago.form_fonts": "custom",
+    "sago.delay_scripts": [],
+    "sago.css_excludes": [],
+    "sago.disable_yoast_schema": false,
+    "sago.disable_saswp": false,
+    "sago.title_separator": "-"
+  },
+  "plugins": {
+    "schema-and-structured-data-for-wp": true,
+    "contact-form-7": true
+  },
+  "theme": {
+    "version": "3.0.0",
+    "files": {
+      "style.css": "/*\nTheme Name: Northwind\nVersion: 3.0.0\n*/\n",
+      "front-page.php": "<?php get_header(); ?>\n<section class=\"relative overflow-hidden bg-white min-h-screen flex flex-col justify-end\">\n  <h1><?php the_title(); ?></h1>\n</section>\n<?php get_footer(); ?>\n",
+      "parts/page-hero.php": "<section class=\"relative\" style=\"min-height:55vh;padding-top:9rem\">\n  <h1><?php the_title(); ?></h1>\n</section>\n",
+      "inc/assets.php": "<?php\nadd_action('wp_enqueue_scripts', function () {\n  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');\n  wp_enqueue_style('theme', get_template_directory_uri() . '/theme.css');\n});\nadd_action('wp_head', function () { ?>\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];var j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j);})(window,document,'script','dataLayer','GTM-XXXX');</script>\n<?php }, 1);\n"
+    }
+  },
+  "pages": [
+    {
+      "path": "/",
+      "id": 101,
+      "type": "page",
+      "h1": "AI Search Growth for Ambitious Brands",
+      "words": 900,
+      "form": true,
+      "seo_title": "AI Search Growth for Ambitious Brands - Northwind Growth",
+      "meta_description": "Be the brand answer engines recommend — search, answer engine and generative engine work under one plan.",
+      "h2": [
+        {
+          "text": "What we do",
+          "next": "We plan and run search programmes."
+        }
+      ]
+    },
+    {
+      "path": "/services/geo/",
+      "id": 102,
+      "type": "service",
+      "h1": "Generative Engine Optimization",
+      "words": 1200,
+      "seo_title": "",
+      "meta_description": "Get recommended by ChatGPT, Perplexity and Gemini when buyers ask which provider to choose.",
+      "focus_keyphrase": "",
+      "h2": [
+        {
+          "text": "What is generative engine optimization?",
+          "next": "GEO is the practice of making your brand quotable by AI answer engines."
+        },
+        {
+          "text": "How we do it",
+          "next": "Citation audits, entity work and content built to be quoted."
+        }
+      ]
+    },
+    {
+      "path": "/services/aio/",
+      "id": 103,
+      "type": "service",
+      "h1": "AIO",
+      "words": 1100,
+      "seo_title": "",
+      "meta_description": "Show up inside AI generated overviews.",
+      "h2": [
+        {
+          "text": "What is AIO?",
+          "next": "AI optimization covers the work that gets a brand into AI Overviews."
+        }
+      ]
+    },
+    {
+      "path": "/handle-negative-google-reviews/",
+      "id": 104,
+      "type": "post",
+      "h1": "How to Handle Negative Google Reviews",
+      "words": 1800,
+      "seo_title": "How to Handle Negative Google Reviews | Northwind Growth",
+      "focus_keyphrase": "how to handle negative google reviews",
+      "meta_description": "How to answer a critical Google review, report fake ones, and win back trust without making the situation worse.",
+      "h2": [
+        {
+          "text": "Should you reply to every negative review?",
+          "next": "It depends on the review."
+        },
+        {
+          "text": "How do you dispute a Google review?",
+          "next": "There are several things to consider first."
+        },
+        {
+          "text": "When can a review be removed?",
+          "next": "Google removes reviews that break its policies, such as spam or conflicts of interest."
+        },
+        {
+          "text": "How to rebuild trust",
+          "next": "Ask happy customers for reviews."
+        }
+      ]
+    },
+    {
+      "path": "/contact-us/",
+      "id": 105,
+      "type": "page",
+      "h1": "Book a Free Marketing Audit",
+      "words": 400,
+      "form": true,
+      "seo_title": "Book a Free Marketing Audit | Northwind Growth",
+      "meta_description": "Share your goal and get a free review of your visibility in search and AI answers. Short call, no pressure, no pitch deck.",
+      "h2": []
+    },
+    {
+      "path": "/about/",
+      "id": 106,
+      "type": "page",
+      "h1": "Our Story",
+      "words": 700,
+      "seo_title": "Our Story and Mission | Northwind Growth",
+      "meta_description": "Northwind Growth is a small search studio helping brands get found by people and by AI answer engines, with plain reporting.",
+      "h2": []
+    }
+  ],
+  "gsc": {
+    "queries": [
+      {
+        "key": "northwind growth",
+        "clicks": 19,
+        "impressions": 72,
+        "ctr": 0.2639,
+        "position": 1.6
+      },
+      {
+        "key": "generative engine optimization service",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0.0,
+        "position": 5.9
+      },
+      {
+        "key": "how to handle negative google reviews",
+        "clicks": 0,
+        "impressions": 190,
+        "ctr": 0.0,
+        "position": 11.8
+      },
+      {
+        "key": "dispute a bad google review",
+        "clicks": 0,
+        "impressions": 64,
+        "ctr": 0.0,
+        "position": 13.5
+      },
+      {
+        "key": "aio services",
+        "clicks": 0,
+        "impressions": 410,
+        "ctr": 0.0,
+        "position": 31.2
+      }
+    ],
+    "pages": [
+      {
+        "key": "https://www.example.com/",
+        "clicks": 19,
+        "impressions": 80,
+        "ctr": 0.2375,
+        "position": 6.2
+      },
+      {
+        "key": "https://www.example.com/services/geo/",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0.0,
+        "position": 6.3
+      },
+      {
+        "key": "https://www.example.com/services/aio/",
+        "clicks": 0,
+        "impressions": 820,
+        "ctr": 0.0,
+        "position": 44.1
+      },
+      {
+        "key": "https://www.example.com/handle-negative-google-reviews/",
+        "clicks": 0,
+        "impressions": 260,
+        "ctr": 0.0,
+        "position": 12.2
+      },
+      {
+        "key": "https://www.example.com/about/",
+        "clicks": 1,
+        "impressions": 28,
+        "ctr": 0.0357,
+        "position": 3.2
+      },
+      {
+        "key": "https://www.example.com/contact-us/",
+        "clicks": 1,
+        "impressions": 24,
+        "ctr": 0.0417,
+        "position": 4.8
+      }
+    ],
+    "query_page": [
+      {
+        "key": "generative engine optimization service|https://www.example.com/services/geo/",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0.0,
+        "position": 5.9
+      },
+      {
+        "key": "how to handle negative google reviews|https://www.example.com/handle-negative-google-reviews/",
+        "clicks": 0,
+        "impressions": 190,
+        "ctr": 0.0,
+        "position": 11.8
+      },
+      {
+        "key": "dispute a bad google review|https://www.example.com/handle-negative-google-reviews/",
+        "clicks": 0,
+        "impressions": 64,
+        "ctr": 0.0,
+        "position": 13.5
+      }
+    ],
+    "countries": [],
+    "devices": [],
+    "chart": []
+  },
+  "genai": {
+    "kind": "genai",
+    "pages": [
+      {
+        "key": "https://www.example.com/blog/handle-negative-google-reviews/",
+        "impressions": 29
+      },
+      {
+        "key": "https://www.example.com/",
+        "impressions": 41
+      }
+    ],
+    "chart": []
+  }
+}

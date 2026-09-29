@@ -1,0 +1,26 @@
+{
+  "_about": "Site profile. Copy this file to sites/<name>.json and point SAGO_SITE at it.",
+  "name": "example",
+  "base_url": "https://www.example.com",
+  "brand": "Example Co",
+  "brand_terms": ["example co", "exampleco"],
+  "markets": ["US", "GB", "CA", "AU", "NZ"],
+  "approved_facts": [
+    "Founded in 2026",
+    "Serves clients in the US, UK, Canada and Australia"
+  ],
+  "cms": "wordpress",
+  "seo_plugin": "yoast",
+  "schema_owner": "theme",
+  "contact_pages": ["/contact-us/"],
+  "form_selectors": [".forminator-custom-form"],
+  "gsc_property": "https://www.example.com/",
+  "theme": {
+    "source_dir": "../wp-theme/example-theme",
+    "build_cmd": "",
+    "test_cmd": "",
+    "smoke_cmd": "",
+    "allow_freeform_patches": false
+  },
+  "urls": []
+}

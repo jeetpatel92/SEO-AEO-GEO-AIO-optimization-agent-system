@@ -1,0 +1,4 @@
+anthropic>=1.9,<2
+google-auth>=2.30,<3
+requests>=2.31,<3
+certifi>=2024.2.2

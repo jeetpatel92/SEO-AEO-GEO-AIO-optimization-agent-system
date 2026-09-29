@@ -1,0 +1,16 @@
+{
+  "_about": "The only settings file the Coach writes. Every change is bounded (coach.py BOUNDS), logged in tunable_changes, and reverted automatically if the measured result drops.",
+  "version": 1,
+  "priority_weights": {
+    "performance": 1.0,
+    "technical": 1.0,
+    "search": 1.0,
+    "ai_visibility": 1.0
+  },
+  "kind_priors": {},
+  "_kind_priors_note": "Per action kind: realised impact divided by estimated impact, learned from outcomes. Missing means 1.0.",
+  "striking_distance": {"min_position": 3.5, "max_position": 20.0},
+  "ctr_gap_threshold": 0.5,
+  "title_target_chars": 55,
+  "min_impressions_for_rewrite": 15
+}
